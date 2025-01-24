@@ -1,0 +1,256 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    contain: layout;
+    box-sizing: border-box;
+    scrollbar-width: none;
+  }
+  .mainSection{
+    background-image: url('../images/h1_hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+
+  }
+  .mainSectionContent{
+    background-color: rgba(0, 0, 0, 0.24);
+
+    height: 100vh;
+  }
+  .header{
+    padding:  2rem;
+    position: -webkit-sticky;
+    width: 100%;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+  }
+  
+  .nav-icon{
+    display: none;
+  }
+  
+  .miniSreen {
+    transform: translateY(-122%);
+    transition: transform 0.5s ease-in-out;
+  }
+  .miniSreen.open {
+    transform: translateY(0);
+  }
+  
+  .arror_icon .text_nav:hover{
+    color: white;
+  }
+  .text_nav .arror_icon:hover{
+    color: white;
+  }
+  
+  .scrolling-text {
+    white-space: nowrap;
+    display: flex;
+    animation: marquee 23s linear infinite;
+    transition: 2s ease-in-out;
+    overflow: hidden;
+  }
+  .form div input{
+    border: 1.5px solid rgb(226, 193, 8);
+    padding: 0.75rem ;
+    border-radius: 7px;
+  }
+  .form div .select{
+    border: 1px solid rgb(226, 193, 8);
+    padding: 0.75rem ;
+    border-radius: 7px;
+  }
+  .form .btn{
+    margin-top: 35px;
+  }
+  .form .btn button{
+    background-color: rgb(226, 193, 8);
+  }
+  .room_box{
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .roomImg {
+    width: 100%; 
+    transition: transform 0.3s ease;
+  }
+
+  .room_box:hover .roomImg {
+    transform: scale(1.05);
+  }
+
+
+
+  
+  @keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+  .rooms{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .Blog{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  /* Section 2*/
+  @media screen and (width <= 320px){
+    .nav-icon{
+      display: block;
+    }
+    .nav{
+      display: none;
+    }
+    .logoImg{
+      margin-top: 10px;
+      width: 80px;
+    }
+    .home_text{
+      font-size: 4.5rem;
+    }
+    .form{
+      flex-direction: column;
+      transform: translateY(-12%);
+    }
+    .form div .select{
+      width: 178px;
+    }
+    .about_section{
+      flex-direction: column;
+      margin: 20px;
+    }
+    .about_section .year_box{
+      font-size: 1rem;
+    }.about_section .image_box{
+      width: 100%;
+    }
+    .about_section .maintext{
+      width: fit-content;
+    }
+    .about_section .maintext{
+      width: fit-content;
+    }
+    .rooms{
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .dining{
+      flex-direction: column;
+    }
+    .Blog{
+      margin: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+  
+  @media (width > 320px) and (width <= 680px){
+    .nav-icon{
+      display: block;
+    }
+    .nav{
+      display: none;
+    }
+    .logoImg{
+      margin-top: 10px;
+      width: 80px;
+    }
+    .form{
+      flex-direction: column;
+      transform: translateY(-12%);
+    }
+    .form div .select{
+      width: 178px;
+    }
+    .about_section{
+      flex-direction: column;
+      margin: 20px;
+    }
+    .about_section .image_box{
+      width: 100%;
+    }
+    .about_section .maintext{
+      width: fit-content;
+    }
+    .dining{
+      flex-direction: column;
+    }
+    .Blog{
+      margin: 20px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (width > 680px) and (width <= 980px){
+    .nav-icon{
+      display: none;
+    }
+    .nav{
+      display: block;
+    }
+    .about_section{
+      flex-direction: column;
+      margin: 10px;
+    }
+    .about_section{
+      justify-content: center;
+    }
+    .about_section .image_box{
+      width: 100%;
+    }
+    .about_section .year_box{
+      width: 80%;
+    }
+    
+    .about_section .maintext{
+      width: fit-content;
+    }
+    .dining{
+      flex-direction: column;
+    }
+    .Blog{
+      margin: 20px;
+      gap: 10px; 
+      /* flex-wrap: wrap; */
+    }
+
+  }
+
+  @media (width > 980px) and (max-width: 1080px){
+    .nav-icon{
+      display: none;
+    }
+    .nav{
+      display: block;
+    }
+    .about_section{
+      margin: 20px;
+    }
+    .about_section .image_box img{
+      width: 100%;
+    }
+    .about_section .year_box{
+      width: 100%;
+      font-size: 2em;
+    }
+  }
